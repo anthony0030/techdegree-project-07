@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&Roboto:300");
+* {
+  box-sizing: border-box; }
+
+body {
+  justify-content: space-evenly;
+  flex-direction: column;
+  display: flex;
+  height: 100vh; }
+
+li, ol, ul {
+  padding: 0;
+  display: inline-block; }
+
+h2 {
+  margin: 0;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(60px);
+  margin: 0; }
+
+button {
+  margin: 6px;
+  border: 1px solid transparent;
+  padding: .5rem 1rem;
+  color: var(#37474F);
+  font-size: var(20px);
+  background-color: var(#E5E5E5);
+  border-radius: 5px;
+  -webkit-transition: var(all 0.2s ease-in-out);
+  -o-transition: var(all 0.2s ease-in-out);
+  transition: var(all 0.2s ease-in-out); }
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  max-height: 900px;
+  text-align: center; }
+
+.section {
+  width: 100%;
+  padding: 10px; }
+
+.header {
+  color: var(#5b85b7); }
+
+.tries {
+  background-image: url("/liveHeart.png"); }
+
+.letter {
+  font-size: var(20px);
+  height: 65px;
+  width: 65px;
+  padding: 20px 1px 0 1px;
+  margin-right: 2px;
+  color: transparent;
+  background: var(#D2D2D2);
+  border-radius: 5px; }
+
+.space {
+  width: 15px; }
+
+.show {
+  color: #000;
+  background-color: #76CE82; }
+
+.keyrow {
+  display: flex;
+  justify-content: center; }
+
+.chosen {
+  background: var(#445069);
+  border-radius: 5px;
+  font-size: var(20px);
+  color: #FFFFFF; }
+
+.btn__reset {
+  padding: 8px;
+  margin: 50px auto;
+  background: #FFFFFF;
+  border-radius: 5px;
+  font-size: var(20px); }
+
+#overlay {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  color: #FFFFFF;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 5px; }
+
+.title {
+  color: #FFF; }
+
+.start {
+  background-color: var(#5b85b7); }
+  .start a {
+    color: var(#78CF82); }
+
+.win {
+  background-color: var(#78CF82); }
+  .win a {
+    color: var(#78CF82); }
+
+.lose {
+  background-color: var(#D94545); }
+  .lose a {
+    color: var(#D94545); }
+
+/*# sourceMappingURL=styles.css.map */
