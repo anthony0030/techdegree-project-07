@@ -23,20 +23,20 @@ h2
   margin: 0
   text-transform: uppercase
   font-family: 'Open Sans', sans-serif
-  font-size: var($font-size-large)
+  font-size: $font-size-large
   margin: 0
 
 button
   margin: 6px
   border: 1px solid transparent
   padding: .5rem 1rem
-  color: var($color-keys)
-  font-size: var($font-size-medium)
-  background-color: var($color-keys-light)
+  color: $color-keys
+  font-size: $font-size-medium
+  background-color: $color-keys-light
   border-radius: 5px
-  -webkit-transition: var($transition)
-  -o-transition: var($transition)
-  transition: var($transition)
+  -webkit-transition: $transition
+  -o-transition: $transition
+  transition: $transition
 
 .main-container
   display: flex
@@ -53,23 +53,23 @@ button
 // Title
 
 .header
-  color: var($color-start)
+  color: $color-start
 
 // Scoreboard
 
-.tries
-  background-image: url('/liveHeart.png')
+// .tries
+//   background-image: url('../images/liveHeart.png')
 
 // Phrase
 
 .letter
-  font-size: var($font-size-medium)
+  font-size: $font-size-medium
   height: 65px
   width: 65px
   padding: 20px 1px 0 1px
   margin-right: 2px
   color: transparent
-  background: var($color-neutral-light)
+  background: $color-neutral-light
   border-radius: 5px
 
 .space
@@ -86,9 +86,9 @@ button
   justify-content: center
 
 .chosen
-  background: var($color-neutral)
+  background: $color-neutral
   border-radius: 5px
-  font-size: var($font-size-medium)
+  font-size: $font-size-medium
   color: #FFFFFF
 
 .btn__reset
@@ -96,7 +96,7 @@ button
   margin: 50px auto
   background: #FFFFFF
   border-radius: 5px
-  font-size: var($font-size-medium)
+  font-size: $font-size-medium
 
 // Overlay
 
@@ -116,16 +116,16 @@ button
   color: #FFF
 
 .start
-  background-color: var($color-start)
+  background-color: $color-start
   a
-    color: var($color-win)
+    color: $color-win
 
 .win
-  background-color: var($color-win)
+  background-color: $color-win
   a
-    color: var($color-win)
+    color: $color-win
 
 .lose
-  background-color: var($color-lose)
+  background-color: $color-lose
   a
-    color: var($color-lose)
+    color: $color-lose

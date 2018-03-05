@@ -16,20 +16,20 @@ h2 {
   margin: 0;
   text-transform: uppercase;
   font-family: 'Open Sans', sans-serif;
-  font-size: var(60px);
+  font-size: 60px;
   margin: 0; }
 
 button {
   margin: 6px;
   border: 1px solid transparent;
   padding: .5rem 1rem;
-  color: var(#37474F);
-  font-size: var(20px);
-  background-color: var(#E5E5E5);
+  color: #37474F;
+  font-size: 20px;
+  background-color: #E5E5E5;
   border-radius: 5px;
-  -webkit-transition: var(all 0.2s ease-in-out);
-  -o-transition: var(all 0.2s ease-in-out);
-  transition: var(all 0.2s ease-in-out); }
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
 
 .main-container {
   display: flex;
@@ -44,19 +44,16 @@ button {
   padding: 10px; }
 
 .header {
-  color: var(#5b85b7); }
-
-.tries {
-  background-image: url("/liveHeart.png"); }
+  color: #5b85b7; }
 
 .letter {
-  font-size: var(20px);
+  font-size: 20px;
   height: 65px;
   width: 65px;
   padding: 20px 1px 0 1px;
   margin-right: 2px;
   color: transparent;
-  background: var(#D2D2D2);
+  background: #D2D2D2;
   border-radius: 5px; }
 
 .space {
@@ -71,9 +68,9 @@ button {
   justify-content: center; }
 
 .chosen {
-  background: var(#445069);
+  background: #445069;
   border-radius: 5px;
-  font-size: var(20px);
+  font-size: 20px;
   color: #FFFFFF; }
 
 .btn__reset {
@@ -81,7 +78,7 @@ button {
   margin: 50px auto;
   background: #FFFFFF;
   border-radius: 5px;
-  font-size: var(20px); }
+  font-size: 20px; }
 
 #overlay {
   display: flex;
@@ -99,18 +96,18 @@ button {
   color: #FFF; }
 
 .start {
-  background-color: var(#5b85b7); }
+  background-color: #5b85b7; }
   .start a {
-    color: var(#78CF82); }
+    color: #78CF82; }
 
 .win {
-  background-color: var(#78CF82); }
+  background-color: #78CF82; }
   .win a {
-    color: var(#78CF82); }
+    color: #78CF82; }
 
 .lose {
-  background-color: var(#D94545); }
+  background-color: #D94545; }
   .lose a {
-    color: var(#D94545); }
+    color: #D94545; }
 
 /*# sourceMappingURL=styles.css.map */
