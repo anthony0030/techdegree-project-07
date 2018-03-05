@@ -2,6 +2,7 @@ const StartGameButton = document.querySelector('.btn__reset');
 const overlayStart = document.getElementById('overlay');
 const qwerty = document.getElementById('qwerty');
 const phrase = document.getElementById('phrase');
+const phraseUl = phrase.getElementsByTagName('ul')[0];
 var missed = 0;
 
 const phrases = [
@@ -19,13 +20,29 @@ StartGameButton.addEventListener('click', function(){
 });
 
 
-function getRandomPhraseArray(arr){
-    //do stuff to any arr that is passed in 
+function getRandomPhraseAsArray(arr){
+	var phraseNumber = Math.floor(Math.random() * (arr.length  + 1));
+	// console.log(phraseNumber);
+	var curentPhrase = arr[phraseNumber];
+	// console.log(curentPhrase);
+	var curentPhraseLetters = curentPhrase.split('');
+	// console.log(curentPhraseLetters);
+	return curentPhraseLetters
 } 
 
+const phraseArray = getRandomPhraseAsArray(phrases);
+
 function addPhraseToDisplay(arr){
-    // do stuff any arr that is passed in, and add to `#phrase ul`
+  for (var i = 0; i < phraseArray.length; i++) { 
+	  var li = document.createElement("li");
+	  li.appendChild(document.createTextNode(arr[i]));
+	  if(arr[i] === " "){li.className += "space"}
+	  else {li.className += "letter"}
+	  phraseUl.appendChild(li);
+	}
 }
+
+addPhraseToDisplay(phraseArray); 
 
 function checkLetter(arr){
    
