@@ -15,13 +15,9 @@ const phrases = [
 
 
 
-StartGameButton.addEventListener('click', function(){ 
-	overlayStart.style.display = "none";
-});
+StartGameButton.addEventListener('click', function(){overlayStart.style.display = "none";});
 
-qwerty.addEventListener('click', function(e){ 
-	console.log(e.target.textContent);
-});
+qwerty.addEventListener('click', checkLetter);
 
 
 
@@ -49,8 +45,10 @@ function addPhraseToDisplay(arr){
 
 addPhraseToDisplay(phraseArray); 
 
-function checkLetter(arr){
-   
+function checkLetter(e){
+	if(e.target.tagName === "BUTTON"){
+		console.log(e.target.textContent);
+	}
 }
 
 function checkWin(arr){
