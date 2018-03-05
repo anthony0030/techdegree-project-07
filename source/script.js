@@ -19,6 +19,11 @@ StartGameButton.addEventListener('click', function(){
 	overlayStart.style.display = "none";
 });
 
+qwerty.addEventListener('click', function(e){ 
+	console.log(e.target.textContent);
+});
+
+
 
 function getRandomPhraseAsArray(arr){
 	var phraseNumber = Math.floor(Math.random() * (arr.length  + 1));
