@@ -1743,6 +1743,16 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/source\/images\/logo.jpg": {
+		"ft": 16384,
+		"iS": 205155,
+		"oA": 2,
+		"oAP": "\/docs\/images\/logo.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/source\/images\/lostHeart.png": {
 		"ft": 32768,
 		"iS": 1956,
@@ -1789,7 +1799,7 @@
 	"displayValue": "techdegree-project-7",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-fry",
-	"lastBuiltDate": 541980231
+	"lastBuiltDate": 541982674
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
