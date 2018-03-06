@@ -38,9 +38,9 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/docs\/README.html",
-		"oF": 0,
+		"oF": 1,
 		"oFM": 0,
 		"oS": 0,
 		"pHT": 0,
@@ -1434,7 +1434,7 @@
 		"uL": 1
 		},
 	"\/source\/css\/styles.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -1732,6 +1732,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/source\/images\/FFFFFF-0.png": {
+		"ft": 32768,
+		"iS": 68,
+		"oA": 2,
+		"oAP": "\/docs\/images\/FFFFFF-0.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/source\/images\/liveHeart.png": {
 		"ft": 32768,
 		"iS": 2158,
@@ -1773,20 +1784,14 @@
 		"oF": 0,
 		"oS": 0
 		},
-	"\/source\/mockups": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "\/docs\/mockups",
-		"oF": 0
-		},
 	"\/source\/script.js": {
 		"ft": 64,
-		"ma": 0,
+		"ma": 1,
 		"mi": 1,
-		"oA": 2,
+		"oA": 0,
 		"oAP": "\/docs\/script.js",
 		"oF": 1,
-		"sC": 3,
+		"sC": 2,
 		"tS": 0
 		}
 	},
@@ -1799,7 +1804,7 @@
 	"displayValue": "techdegree-project-7",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-fry",
-	"lastBuiltDate": 541982674
+	"lastBuiltDate": 542100769
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -3502,7 +3507,7 @@
 		},
 	"jsLintFlags2": {
 		"bitwise": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"browser": {
@@ -3510,15 +3515,15 @@
 			"flagValue": -1
 			},
 		"couch": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"devel": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"es6": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"eval": {
@@ -3526,7 +3531,7 @@
 			"flagValue": -1
 			},
 		"for": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"maxlen": {
@@ -3534,15 +3539,15 @@
 			"flagValue": 150
 			},
 		"node": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"this": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"white": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			}
 		},

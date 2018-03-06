@@ -27,6 +27,7 @@ h2
   margin: 0
 
 button
+  cursor: pointer
   margin: 6px
   border: 1px solid transparent
   padding: .5rem 1rem
@@ -37,6 +38,11 @@ button
   -webkit-transition: $transition
   -o-transition: $transition
   transition: $transition
+  &:focus
+      outline-color: #ffffff00
+      outline: none
+  &:active
+    box-shadow: 2px 2px inset
 
 .main-container
   display: flex
@@ -57,9 +63,17 @@ button
 
 // Scoreboard
 
-// .tries
-//   background-image: url('../images/liveHeart.png')
+.tries
+  background-image: url('../images/liveHeart.png')
+  background-size: 100%
+  background-repeat: no-repeat
+  z-index: 50
 
+.tries-die
+  @extend .tries
+  background-image: url('../images/lostHeart.png')
+  transition: background-image 2s
+  transition-timing-function: ease
 // Phrase
 
 .letter
@@ -78,6 +92,7 @@ button
 .show
   color: #000
   background-color: #76CE82
+  transition: background-color 2s
 
 // Keyboard
 
@@ -97,6 +112,7 @@ button
   background: #FFFFFF
   border-radius: 5px
   font-size: $font-size-medium
+  cursor: pointer
 
 // Overlay
 
