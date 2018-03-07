@@ -41,7 +41,7 @@ button {
   button:focus {
     outline-color: #ffffff00;
     outline: none; }
-  button:active {
+  button:active:not(".chosen") {
     -webkit-box-shadow: 2px 2px inset;
             box-shadow: 2px 2px inset; }
 
