@@ -34,7 +34,7 @@ function contains(a, obj){
 }
 
 function init(){
-  console.log("init() run");
+  // console.log("init() run");
   // Resets Variables
   missed = 0;
   letters = 0;
@@ -65,7 +65,7 @@ function init(){
     if(contains(chars, e.key)){
       checkLetter(e.key.toLowerCase(), true);
     }
-    console.log(e.key);
+    // console.log(e.key);
   });
 } //End of init()
 
@@ -87,7 +87,7 @@ function getRandomPhraseAsArray(arr){
 }
 
 function addPhraseToDisplay(arr){
-  console.log("addPhraseToDisplay() run");
+  // console.log("addPhraseToDisplay() run");
   for (var i = 0; i < curentPhraseLetters.length; i++){
     var li = document.createElement("li");
     li.appendChild(document.createTextNode(arr[i]));
@@ -103,24 +103,24 @@ function addPhraseToDisplay(arr){
 }
 
 function checkLetter(event, keyboard){
-  console.log("checkLetter() run");
+  // console.log("checkLetter() run");
   key = event.target;
 
   if(keyboard){
-    console.log("keyboard used");
+    // console.log("keyboard used");
     key = findOSKKey(event)
   }
 
   if((key.tagName === "BUTTON" || keyboard) && key.className !== "chosen"){
-    console.log(key.textContent);
+    // console.log(key.textContent);
     key.className += "chosen";
 
     var found = false;
     for(var i = 0; i < curentPhraseLetters.length; i++){
       var curentPhraseLetter = curentPhraseLetters[i];
       if(curentPhraseLetter === key.textContent){
-        console.log("is found!!!!!!!");
-        console.log(key);
+        // console.log("is found!!!!!!!");
+        // console.log(key);
         found = true;
         Showetter(curentPhraseLetter);
         curentPhraseLetter = "";
@@ -128,7 +128,7 @@ function checkLetter(event, keyboard){
       }
     }
     if(!found){
-      console.log("DIE!!!!!!!");
+      // console.log("DIE!!!!!!!");
       missed++;
       removeLife();
     }
@@ -136,7 +136,7 @@ function checkLetter(event, keyboard){
 }
 
 function findOSKKey(letterToBeFound){
-  console.log("getRandomPhraseAsArray() run");
+  // console.log("getRandomPhraseAsArray() run");
   for (var u = 0; u < qwertyButtons.length; u++){
     if (qwertyButtons[u].textContent == letterToBeFound){
       return qwertyButtons[u];
@@ -145,12 +145,12 @@ function findOSKKey(letterToBeFound){
 }
 
 function Showetter(letter){
-  console.log("Showetter() run");
-  console.log("removing " + letter);
+  // console.log("Showetter() run");
+  // console.log("removing " + letter);
   for(var j = 0; j < phraseUl.children.length; j++){
     var letterToCheck = phraseUl.children[j];
     if(letterToCheck.textContent == letter){
-      console.log(letterToCheck);
+      // console.log(letterToCheck);
       letterToCheck.className += " show";
       letters--;
     }
@@ -159,26 +159,26 @@ function Showetter(letter){
 }
 
 function removeLife(){
-  console.log("removeLife() run")
+  // console.log("removeLife() run")
   triesLI[missed - 1].className += "-die";
   lives--;
-  console.log("LOST A LIFE");
+  // console.log("LOST A LIFE");
   if(lives === 0){
-    console.log("YOU LOST ALL THE LIVES");
+    // console.log("YOU LOST ALL THE LIVES");
     lose();
   }
 }
 
 function checkWin(){
-  console.log("checkWin() run");
+  // console.log("checkWin() run");
   if(letters === 0){
-    console.log("You win!");
+    // console.log("You win!");
     win();
   }
 }
 
 function win(){
-  console.log("win() run");
+  // console.log("win() run");
   title.textContent = "You were successful at the Wheel of Success :D";
   startGameButton.textContent = "Play Again!";
   overlay.style.display = "";
@@ -186,7 +186,7 @@ function win(){
 }
 
 function lose(){
-  console.log("lose() run");
+  // console.log("lose() run");
   title.textContent = "You lost at the wheel of success :(";
   startGameButton.textContent = "Try Again :)";
   overlay.style.display = "";
