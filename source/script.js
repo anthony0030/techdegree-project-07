@@ -10,8 +10,8 @@ const phrases = [
   "decaffeinated coffee is the devils blend",
   "Time is an illusion"
 ];
-const Title = document.querySelector(".title");
-const StartGameButton = document.querySelector(".btn__reset");
+const title = document.querySelector(".title");
+const startGameButton = document.querySelector(".btn__reset");
 const overlay = document.getElementById("overlay");
 const qwerty = document.getElementById("qwerty");
 const qwertyButtons = qwerty.getElementsByTagName("button");
@@ -69,7 +69,7 @@ function init(){
   });
 } //End of init()
 
-StartGameButton.addEventListener("click", function(){
+startGameButton.addEventListener("click", function(){
   overlay.style.display = "none";
   init();
 });
@@ -179,16 +179,16 @@ function checkWin(){
 
 function win(){
   console.log("win() run");
-  Title.textContent = "You were successful at the Wheel of Success :D";
-  StartGameButton.textContent = "Play Again!";
+  title.textContent = "You were successful at the Wheel of Success :D";
+  startGameButton.textContent = "Play Again!";
   overlay.style.display = "";
   overlay.className = "start win";
 }
 
 function lose(){
   console.log("lose() run");
-  Title.textContent = "You lost at the wheel of success :(";
-  StartGameButton.textContent = "Try Again :)";
+  title.textContent = "You lost at the wheel of success :(";
+  startGameButton.textContent = "Try Again :)";
   overlay.style.display = "";
   overlay.className = "start lose";
 }
