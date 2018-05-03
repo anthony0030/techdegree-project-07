@@ -7,7 +7,7 @@
 		"uuidString": "9A13AC89-A095-490D-A799-72F858D9CC5C"
 		}
 	],
-"creatorBuild": "26330",
+"creatorBuild": "26680",
 "files": {
 	"\/.gitignore": {
 		"cB": 0,
@@ -15,6 +15,13 @@
 		"oA": 2,
 		"oAP": "\/docs\/.gitignore",
 		"oF": 0
+		},
+	"\/alternative functions made by sebastian.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/docs\/alternative functions made by sebastian.html",
+		"oF": 1
 		},
 	"\/bower.json": {
 		"ft": 524288,
@@ -1757,6 +1764,7 @@
 	"\/source\/images\/logo.jpg": {
 		"ft": 16384,
 		"iS": 205155,
+		"jF": 0,
 		"oA": 2,
 		"oAP": "\/docs\/images\/logo.jpg",
 		"oF": 0,
@@ -1801,10 +1809,11 @@
 	},
 "projectAttributes": {
 	"creationDate": 529505745,
-	"displayValue": "techdegree-project-7",
+	"displayValue": "techdegree-project-07",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-fry",
-	"lastBuiltDate": 542106123
+	"iconImageWasSetByUser": 0,
+	"lastBuiltDate": 547045178
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -3607,6 +3616,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"outputFormat": 0,
 		"quality": 100
 		},
 	"languageDefaultsJS": {

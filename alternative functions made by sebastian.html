@@ -1,0 +1,49 @@
+<script>
+  var phrase = {
+    text: "The whole problem with the world is that fools and fanatics are always so certain of themselves, and wiser people so full of doubts.",
+    attempts: {
+      current: 0,
+      most: 5,
+      gameOver: false
+    },
+    guessLetter: function(letter){
+      if(this.attempts.gaveOver)
+        return "YOU LOST. STOP TRYING";
+
+      if(this.checkLetter(letter)){
+        return "YES!";
+      } else {
+        this.attempts.current++;
+        return this.checkAttempts();
+      }
+    },
+    checkLetter: function(letter){
+      return this.text.toLowerCase().indexOf(letter) !== -1;
+    },
+    checkAttempts: function(){
+      if(this.attempts.current == this.attempts.most){
+        this.attempts.gaveOver = true;
+        return "YOU LOSE!";
+      } else {
+        return "Nope, try again!";
+      }
+    }
+  }
+
+  console.log(phrase.text)
+  console.log('======================================')
+  console.log('does it have a A?: ' + phrase.guessLetter('a'))
+  console.log('does it have a B?: ' + phrase.guessLetter('b'))
+  console.log('does it have a C?: ' + phrase.guessLetter('c'))
+  console.log('does it have a D?: ' + phrase.guessLetter('d'))
+  console.log('does it have a E?: ' + phrase.guessLetter('e'))
+  console.log('does it have a F?: ' + phrase.guessLetter('f'))
+  console.log('does it have a K?: ' + phrase.guessLetter('k'))
+  console.log('does it have a X?: ' + phrase.guessLetter('x'))
+  console.log('does it have a Z?: ' + phrase.guessLetter('z'))
+  console.log('does it have a J?: ' + phrase.guessLetter('J'))
+  console.log('does it have a T?: ' + phrase.guessLetter('t'))
+  console.log('does it have a N?: ' + phrase.guessLetter('n'))
+  console.log('does it have a G?: ' + phrase.guessLetter('g'))
+  console.log('does it have a Q?: ' + phrase.guessLetter('q'))
+</script>
