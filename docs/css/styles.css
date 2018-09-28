@@ -1,18 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&Roboto:300");
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  box-sizing: border-box; }
 
 body {
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  justify-content: space-evenly;
+  flex-direction: column;
   display: flex;
   height: 100vh; }
 
@@ -36,22 +28,15 @@ button {
   font-size: 20px;
   background-color: #E5E5E5;
   border-radius: 5px;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
   button:focus {
     outline-color: #ffffff00;
     outline: none; }
 
 .main-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-around;
   height: 100%;
   max-height: 900px;
   text-align: center; }
@@ -71,10 +56,8 @@ button {
 
 .tries-die {
   background-image: url("../images/lostHeart.png");
-  -webkit-transition: background-image 2s;
   transition: background-image 2s;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease; }
+  transition-timing-function: ease; }
 
 .letter {
   font-size: 20px;
@@ -93,16 +76,11 @@ button {
 .show {
   color: #000;
   background-color: #76CE82;
-  -webkit-transition: background-color 2s;
   transition: background-color 2s; }
 
 .keyrow {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  justify-content: center; }
 
 .chosen {
   background: #445069;
@@ -119,18 +97,11 @@ button {
   cursor: pointer; }
 
 #overlay {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   position: fixed;
   color: #FFFFFF;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   top: 0;
   bottom: 0;
   left: 0;
