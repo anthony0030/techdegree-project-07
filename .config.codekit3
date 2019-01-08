@@ -7,7 +7,7 @@
 		"uuidString": "9A13AC89-A095-490D-A799-72F858D9CC5C"
 		}
 	],
-"creatorBuild": "28901",
+"creatorBuild": "28905",
 "files": {
 	"/.gitignore": {
 		"cB": 0,
@@ -30,6 +30,12 @@
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
+		},
+	"/docs": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/docs/docs",
+		"oF": 0
 		},
 	"/README.md": {
 		"cB": 0,
@@ -1807,7 +1813,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-fry",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 559835028.62225902
+	"lastBuiltDate": 568641877.63922298
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
