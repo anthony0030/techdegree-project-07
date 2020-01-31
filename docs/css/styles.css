@@ -28,6 +28,8 @@ button {
   font-size: 20px;
   background-color: #E5E5E5;
   border-radius: 5px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
   button:focus {
     outline-color: #ffffff00;
@@ -125,4 +127,5 @@ button {
   background-color: #D94545; }
   .lose a {
     color: #D94545; }
+
 /*# sourceMappingURL=styles.css.map */

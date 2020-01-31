@@ -20,7 +20,7 @@ const phraseUl = phrase.getElementsByTagName("ul")[0];
 const triesLI = document.querySelectorAll("li.tries");
 
 var lives = triesLI.length;
-var curentPhraseLetters = "";
+var currentPhraseLetters = "";
 var missed = 0;
 var letters = 0;
 
@@ -40,7 +40,7 @@ function init(){
   letters = 0;
   lives = triesLI.length;
   //resets keyboard
-  chosenLetters = qwerty.querySelectorAll(".chosen");
+  const chosenLetters = qwerty.querySelectorAll(".chosen");
   for(var q = 0; q < chosenLetters.length; q++){
     chosenLetters[q].classList.remove("chosen");
   }
@@ -54,13 +54,13 @@ function init(){
     triesLI[l].className = "tries";
   }
 
-  curentPhraseLetters = getRandomPhraseAsArray(phrases);
-  addPhraseToDisplay(curentPhraseLetters);
+  currentPhraseLetters = getRandomPhraseAsArray(phrases);
+  addPhraseToDisplay(currentPhraseLetters);
 
-  // Event listnener for the On-Screen Keyboard
+  // Event listener for the On-Screen Keyboard
   qwerty.addEventListener("click", checkLetter);
 
-  // Event listnener for Keyboard
+  // Event listener for Keyboard
   document.addEventListener("keypress", function(e){
     if(contains(chars, e.key)){
       checkLetter(e.key.toLowerCase(), true);
@@ -80,15 +80,15 @@ function getRandomPhraseAsArray(arr){
   //console.log(phraseNumber);
   var curentPhrase = arr[phraseNumber];
   //console.log(curentPhrase);
-  var curentPhraseLetters = curentPhrase.split("");
-  //console.log(curentPhraseLetters);
-  letters = curentPhraseLetters.length;
-  return curentPhraseLetters;
+  var currentPhraseLetters = curentPhrase.split("");
+  //console.log(currentPhraseLetters);
+  letters = currentPhraseLetters.length;
+  return currentPhraseLetters;
 }
 
 function addPhraseToDisplay(arr){
   // console.log("addPhraseToDisplay() run");
-  for (var i = 0; i < curentPhraseLetters.length; i++){
+  for (var i = 0; i < currentPhraseLetters.length; i++){
     var li = document.createElement("li");
     li.appendChild(document.createTextNode(arr[i]));
     if(arr[i] === " "){
@@ -104,7 +104,7 @@ function addPhraseToDisplay(arr){
 
 function checkLetter(event, keyboard){
   // console.log("checkLetter() run");
-  key = event.target;
+  let key = event.target;
 
   if(keyboard){
     // console.log("keyboard used");
@@ -116,8 +116,8 @@ function checkLetter(event, keyboard){
     key.className += "chosen";
 
     var found = false;
-    for(var i = 0; i < curentPhraseLetters.length; i++){
-      var curentPhraseLetter = curentPhraseLetters[i];
+    for(var i = 0; i < currentPhraseLetters.length; i++){
+      var curentPhraseLetter = currentPhraseLetters[i];
       if(curentPhraseLetter === key.textContent){
         // console.log("is found!!!!!!!");
         // console.log(key);
