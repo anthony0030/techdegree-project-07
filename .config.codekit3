@@ -21,7 +21,7 @@
 		"ft": 524288,
 		"oA": 1,
 		"oAP": "/docs/.vscode/settings-min.json",
-		"oF": 0,
+		"oF": 1,
 		"oO": 0,
 		"oS": 1
 		},
@@ -32,12 +32,6 @@
 		"oA": 1,
 		"oAP": "/docs/alternative functions made by sebastian.html",
 		"oF": 1
-		},
-	"/docs": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "/docs/docs",
-		"oF": 0
 		},
 	"/node_modules": {
 		"ft": 65536,
@@ -480,7 +474,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-fry",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 602173003.56737494
+	"lastBuiltDate": 602695784.66019797
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
