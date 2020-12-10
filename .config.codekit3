@@ -82,6 +82,14 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"/source/.nojekyll": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/docs/.nojekyll",
+		"oF": 0
+		},
 	"/source/_favicon.jade": {
 		"cB": 0,
 		"cOD": 1,
@@ -538,7 +546,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-fry",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 626085102.69372702
+	"lastBuiltDate": 629289038.19287705
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
