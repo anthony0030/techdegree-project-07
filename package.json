@@ -9,7 +9,7 @@
   "license": "UNLICENSED",
   "homepage": "https://anthony0030.github.io/techdegree-project-07",
   "dependencies": {
-    "jquery": "^3.5.1",
+    "jquery": "^3.6.0",
     "normalize.css": "^8.0.1"
   }
 }
