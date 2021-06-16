@@ -124,6 +124,34 @@ function checkLetter(event, keyboard){
   }
 }
 
+function getRandomPhraseAsArray(arr){
+  //console.log("getRandomPhraseAsArray() run");
+  var phraseNumber = Math.floor(Math.random() * (arr.length));
+  //console.log(phraseNumber);
+  var currentPhrase = arr[phraseNumber];
+  //console.log(currentPhrase);
+  var currentPhraseLetters = currentPhrase.split("");
+  //console.log(currentPhraseLetters);
+  letters = currentPhraseLetters.length;
+  return currentPhraseLetters;
+}
+
+function addPhraseToDisplay(arr){
+  // console.log("addPhraseToDisplay() run");
+  for (var i = 0; i < currentPhraseLetters.length; i++){
+    var li = document.createElement("li");
+    li.appendChild(document.createTextNode(arr[i]));
+    if(arr[i] === " "){
+      li.className += "space";
+      letters--;
+    }
+    else{
+      li.className += "letter";
+    }
+    phraseUl.appendChild(li);
+  }
+}
+
 function init(){
   // console.log("init() run");
   // Resets Variables
@@ -165,31 +193,3 @@ startGameButton.addEventListener("click", function(){
   overlay.style.display = "none";
   init();
 });
-
-function getRandomPhraseAsArray(arr){
-  //console.log("getRandomPhraseAsArray() run");
-  var phraseNumber = Math.floor(Math.random() * (arr.length));
-  //console.log(phraseNumber);
-  var currentPhrase = arr[phraseNumber];
-  //console.log(currentPhrase);
-  var currentPhraseLetters = currentPhrase.split("");
-  //console.log(currentPhraseLetters);
-  letters = currentPhraseLetters.length;
-  return currentPhraseLetters;
-}
-
-function addPhraseToDisplay(arr){
-  // console.log("addPhraseToDisplay() run");
-  for (var i = 0; i < currentPhraseLetters.length; i++){
-    var li = document.createElement("li");
-    li.appendChild(document.createTextNode(arr[i]));
-    if(arr[i] === " "){
-      li.className += "space";
-      letters--;
-    }
-    else{
-      li.className += "letter";
-    }
-    phraseUl.appendChild(li);
-  }
-}
