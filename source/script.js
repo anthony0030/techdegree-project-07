@@ -33,6 +33,97 @@ function contains(a, obj){
   return false;
 }
 
+function win(){
+  // console.log("win() run");
+  title.textContent = "You were successful at the Wheel of Success :D";
+  startGameButton.textContent = "Play Again!";
+  overlay.style.display = "";
+  overlay.className = "start win";
+}
+
+function checkWin(){
+  // console.log("checkWin() run");
+  if(letters === 0){
+    // console.log("You win!");
+    win();
+  }
+}
+
+function lose(){
+  // console.log("lose() run");
+  title.textContent = "You lost at the wheel of success :(";
+  startGameButton.textContent = "Try Again :)";
+  overlay.style.display = "";
+  overlay.className = "start lose";
+}
+
+function removeLife(){
+  // console.log("removeLife() run")
+  triesLI[missed - 1].className += "-die";
+  lives--;
+  // console.log("LOST A LIFE");
+  if(lives === 0){
+    // console.log("YOU LOST ALL THE LIVES");
+    lose();
+  }
+}
+
+function showLetter(letter){
+  // console.log("showLetter() run");
+  // console.log("removing " + letter);
+  for(var j = 0; j < phraseUl.children.length; j++){
+    var letterToCheck = phraseUl.children[j];
+    if(letterToCheck.textContent == letter){
+      // console.log(letterToCheck);
+      letterToCheck.className += " show";
+      letters--;
+    }
+  }
+  checkWin();
+}
+
+function findOSKKey(letterToBeFound){
+  // console.log("getRandomPhraseAsArray() run");
+  for (var u = 0; u < qwertyButtons.length; u++){
+    if (qwertyButtons[u].textContent == letterToBeFound){
+      return qwertyButtons[u];
+    }
+  }
+}
+
+function checkLetter(event, keyboard){
+  // console.log("checkLetter() run");
+  let key = event.target;
+
+  if(keyboard){
+    // console.log("keyboard used");
+    key = findOSKKey(event);
+  }
+
+  if((key.tagName === "BUTTON" || keyboard) && key.className !== "chosen"){
+    // console.log(key.textContent);
+    key.className += "chosen";
+
+    var found = false;
+    for(var i = 0; i < currentPhraseLetters.length; i++){
+      var currentPhraseLetter = currentPhraseLetters[i];
+      if(currentPhraseLetter === key.textContent){
+        // console.log("is found!!!!!!!");
+        // console.log(key);
+        found = true;
+        showLetter(currentPhraseLetter);
+        currentPhraseLetter = "";
+        break;
+      }
+    }
+    if(!found){
+      // console.log("DIE!!!!!!!");
+      missed++;
+      removeLife();
+    }
+  }
+}
+
 function init(){
   // console.log("init() run");
   // Resets Variables
@@ -101,95 +192,4 @@ function addPhraseToDisplay(arr){
     }
     phraseUl.appendChild(li);
   }
-}
-
-function checkLetter(event, keyboard){
-  // console.log("checkLetter() run");
-  let key = event.target;
-
-  if(keyboard){
-    // console.log("keyboard used");
-    key = findOSKKey(event);
-  }
-
-  if((key.tagName === "BUTTON" || keyboard) && key.className !== "chosen"){
-    // console.log(key.textContent);
-    key.className += "chosen";
-
-    var found = false;
-    for(var i = 0; i < currentPhraseLetters.length; i++){
-      var currentPhraseLetter = currentPhraseLetters[i];
-      if(currentPhraseLetter === key.textContent){
-        // console.log("is found!!!!!!!");
-        // console.log(key);
-        found = true;
-        ShowLetter(currentPhraseLetter);
-        currentPhraseLetter = "";
-        break;
-      }
-    }
-    if(!found){
-      // console.log("DIE!!!!!!!");
-      missed++;
-      removeLife();
-    }
-  }
-}
-
-function findOSKKey(letterToBeFound){
-  // console.log("getRandomPhraseAsArray() run");
-  for (var u = 0; u < qwertyButtons.length; u++){
-    if (qwertyButtons[u].textContent == letterToBeFound){
-      return qwertyButtons[u];
-    }
-  }
-}
-
-function ShowLetter(letter){
-  // console.log("ShowLetter() run");
-  // console.log("removing " + letter);
-  for(var j = 0; j < phraseUl.children.length; j++){
-    var letterToCheck = phraseUl.children[j];
-    if(letterToCheck.textContent == letter){
-      // console.log(letterToCheck);
-      letterToCheck.className += " show";
-      letters--;
-    }
-  }
-  checkWin();
-}
-
-function removeLife(){
-  // console.log("removeLife() run")
-  triesLI[missed - 1].className += "-die";
-  lives--;
-  // console.log("LOST A LIFE");
-  if(lives === 0){
-    // console.log("YOU LOST ALL THE LIVES");
-    lose();
-  }
-}
-
-function checkWin(){
-  // console.log("checkWin() run");
-  if(letters === 0){
-    // console.log("You win!");
-    win();
-  }
-}
-
-function win(){
-  // console.log("win() run");
-  title.textContent = "You were successful at the Wheel of Success :D";
-  startGameButton.textContent = "Play Again!";
-  overlay.style.display = "";
-  overlay.className = "start win";
-}
-
-function lose(){
-  // console.log("lose() run");
-  title.textContent = "You lost at the wheel of success :(";
-  startGameButton.textContent = "Try Again :)";
-  overlay.style.display = "";
-  overlay.className = "start lose";
 }
