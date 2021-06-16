@@ -46,8 +46,9 @@ function init(){
   }
 
   //Resets top phrase
-  while (phraseUl.firstChild)
+  while(phraseUl.firstChild){
     phraseUl.removeChild(phraseUl.firstChild);
+  }
 
   //Resets Lives class
   for(var l = 0; l < lives; l++){
@@ -78,9 +79,9 @@ function getRandomPhraseAsArray(arr){
   //console.log("getRandomPhraseAsArray() run");
   var phraseNumber = Math.floor(Math.random() * (arr.length));
   //console.log(phraseNumber);
-  var curentPhrase = arr[phraseNumber];
-  //console.log(curentPhrase);
-  var currentPhraseLetters = curentPhrase.split("");
+  var currentPhrase = arr[phraseNumber];
+  //console.log(currentPhrase);
+  var currentPhraseLetters = currentPhrase.split("");
   //console.log(currentPhraseLetters);
   letters = currentPhraseLetters.length;
   return currentPhraseLetters;
@@ -108,7 +109,7 @@ function checkLetter(event, keyboard){
 
   if(keyboard){
     // console.log("keyboard used");
-    key = findOSKKey(event)
+    key = findOSKKey(event);
   }
 
   if((key.tagName === "BUTTON" || keyboard) && key.className !== "chosen"){
@@ -117,13 +118,13 @@ function checkLetter(event, keyboard){
 
     var found = false;
     for(var i = 0; i < currentPhraseLetters.length; i++){
-      var curentPhraseLetter = currentPhraseLetters[i];
-      if(curentPhraseLetter === key.textContent){
+      var currentPhraseLetter = currentPhraseLetters[i];
+      if(currentPhraseLetter === key.textContent){
         // console.log("is found!!!!!!!");
         // console.log(key);
         found = true;
-        Showetter(curentPhraseLetter);
-        curentPhraseLetter = "";
+        ShowLetter(currentPhraseLetter);
+        currentPhraseLetter = "";
         break;
       }
     }
@@ -144,8 +145,8 @@ function findOSKKey(letterToBeFound){
   }
 }
 
-function Showetter(letter){
-  // console.log("Showetter() run");
+function ShowLetter(letter){
+  // console.log("ShowLetter() run");
   // console.log("removing " + letter);
   for(var j = 0; j < phraseUl.children.length; j++){
     var letterToCheck = phraseUl.children[j];
