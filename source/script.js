@@ -73,7 +73,7 @@ function showLetter(letter){
   // console.log("removing " + letter);
   for(var j = 0; j < phraseUl.children.length; j++){
     var letterToCheck = phraseUl.children[j];
-    if(letterToCheck.textContent == letter){
+    if(letterToCheck.textContent === letter){
       // console.log(letterToCheck);
       letterToCheck.className += " show";
       letters--;
@@ -85,7 +85,7 @@ function showLetter(letter){
 function findOSKKey(letterToBeFound){
   // console.log("getRandomPhraseAsArray() run");
   for (var u = 0; u < qwertyButtons.length; u++){
-    if (qwertyButtons[u].textContent == letterToBeFound){
+    if (qwertyButtons[u].textContent === letterToBeFound){
       return qwertyButtons[u];
     }
   }
