@@ -1,39 +1,52 @@
+@import "variables";
+
+// ? Main styles
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&Roboto:300");
+
+
+// ? main
+
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body {
   justify-content: space-evenly;
   flex-direction: column;
   display: flex;
-  height: 100vh; }
+  height: 100vh;
+}
 
 li, ol, ul {
   padding: 0;
-  display: inline-block; }
+  display: inline-block;
+}
 
 h2 {
   margin: 0;
   text-transform: uppercase;
   font-family: "Open Sans", sans-serif;
-  font-size: 60px;
-  margin: 0; }
+  font-size: $font-size-large;
+  margin: 0;
+}
 
 button {
   cursor: pointer;
   margin: 6px;
   border: 1px solid transparent;
   padding: 0.5rem 1rem;
-  color: #37474F;
-  font-size: 20px;
-  background-color: #E5E5E5;
+  color: $color-keys;
+  font-size: $font-size-medium;
+  background-color: $color-keys-light;
   border-radius: 5px;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
-  button:focus {
+  -webkit-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+  &:focus {
     outline-color: #ffffff00;
-    outline: none; }
+    outline: none;
+  }
+}
 
 .main-container {
   display: flex;
@@ -41,62 +54,84 @@ button {
   justify-content: space-around;
   height: 100%;
   max-height: 900px;
-  text-align: center; }
+  text-align: center;
+}
 
 .section {
   width: 100%;
-  padding: 10px; }
+  padding: 10px;
+}
+
+// ? Title
 
 .header {
-  color: #5b85b7; }
+  color: $color-start;
+}
 
-.tries, .tries-die {
+// ? Scoreboard
+
+.tries {
   background-image: url("../images/liveHeart.png");
   background-size: 100%;
   background-repeat: no-repeat;
-  z-index: 50; }
+  z-index: 50;
+}
 
 .tries-die {
+  @extend .tries;
   background-image: url("../images/lostHeart.png");
   transition: background-image 2s;
-  transition-timing-function: ease; }
+  transition-timing-function: ease;
+}
+
+  // ? Phrase
 
 .letter {
-  font-size: 20px;
+  font-size: $font-size-medium;
   height: 65px;
   width: 65px;
   padding: 20px 1px 0 1px;
   margin-right: 2px;
   margin-bottom: 15px;
   color: transparent;
-  background: #D2D2D2;
-  border-radius: 5px; }
+  background: $color-neutral-light;
+  border-radius: 5px;
+}
 
 .space {
-  width: 15px; }
+  width: 15px;
+}
 
 .show {
   color: #000000;
   background-color: #76CE82;
-  transition: background-color 2s; }
+  transition: background-color 2s;
+}
+
+// ? Keyboard
 
 .keyrow {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+}
 
 .chosen {
-  background: #445069;
+  background: $color-neutral;
   border-radius: 5px;
-  font-size: 20px;
-  color: #FFFFFF; }
+  font-size: $font-size-medium;
+  color: #FFFFFF;
+}
 
 .btn__reset {
   padding: 8px;
   margin: 50px auto;
   background: #FFFFFF;
   border-radius: 5px;
-  font-size: 20px;
-  cursor: pointer; }
+  font-size: $font-size-medium;
+  cursor: pointer;
+}
+
+// ? Overlay
 
 #overlay {
   display: flex;
@@ -108,24 +143,30 @@ button {
   bottom: 0;
   left: 0;
   right: 0;
-  border-radius: 5px; }
+  border-radius: 5px;
+}
 
 .title {
-  color: #FFFFFF; }
+  color: #FFFFFF;
+}
 
 .start {
-  background-color: #5b85b7; }
-  .start a {
-    color: #78CF82; }
+  background-color: $color-start;
+  a {
+    color: $color-win;
+  }
+}
 
 .win {
-  background-color: #78CF82; }
-  .win a {
-    color: #78CF82; }
+  background-color: $color-win;
+  a {
+    color: $color-win;
+  }
+}
 
 .lose {
-  background-color: #D94545; }
-  .lose a {
-    color: #D94545; }
-
-/*# sourceMappingURL=styles.css.map */
+  background-color: $color-lose;
+  a {
+    color: $color-lose;
+  }
+}
